@@ -44,7 +44,7 @@
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 85%;
+    width: 100%;
     padding: 0%;
   }
   header {
@@ -54,9 +54,17 @@
     width: 100%;
   }
 }
-
-/* For devices larger than 550px */
 @media (min-width: 550px) {
+  .four.columns {
+    width: 48%;
+  }
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    margin-left: 52%;
+  }
+}
+/* For devices larger than 550px */
+@media (min-width: 850px) {
   .container {
     width: 80%;
   }

@@ -40,7 +40,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png" />
   </head>
 
-  <body>
+  <body onresize="resize()">
     <div class="row">
       <header class="header twelve columns">
         <div class="logo">
@@ -50,23 +50,30 @@
       </header>
     </div>
     <div id="nav" class="two columns">
-      <form class="container clearfix nav-menu">
-        <input id="all" type="reset" name="filter" value="Wszystkie" />
-        <input
-          id="illustrations"
-          type="reset"
-          value="Ilustracje"
-          name="filter"
-        />
-        <input id="posters" type="reset" value="Plakaty" name="filter" />
-        <input id="typography" type="reset" value="Typografia" name="filter" />
-        <input id="packaging" type="reset" value="Opakowania" name="filter" />
-      </form>
+      <div class="row">
+        <form class="container clearfix nav-menu">
+          <input id="all" type="reset" name="filter" value="Wszystkie" />
+          <input
+            id="illustrations"
+            type="reset"
+            value="Ilustracje"
+            name="filter"
+          />
+          <input id="posters" type="reset" value="Plakaty" name="filter" />
+          <input
+            id="typography"
+            type="reset"
+            value="Typografia"
+            name="filter"
+          />
+          <input id="packaging" type="reset" value="Opakowania" name="filter" />
+        </form>
+      </div>
     </div>
     <div class="row">
-      <div class="ten columns">
+      <div id="document_body" class="ten columns">
         <section class="portfolio">
-          <div class="row">
+          <div class="port-section row">
             <div class="four columns">
               <figure data category="ilustracje">
                 <img
@@ -119,7 +126,7 @@
               </figure>
             </div>
           </div>
-          <div class="row">
+          <div class="port-section row">
             <div class="four columns">
               <figure data category="ilustracje">
                 <img
@@ -202,12 +209,38 @@
       </footer>
     </div>
     <script>
+      const x = document.getElementById("nav");
+      const test = document.getElementsByClassName("port-section");
       function hide() {
-        var x = document.getElementById("nav");
         if (x.style.display === "block") {
           x.style.display = "none";
         } else {
           x.style.display = "block";
+        }
+      }
+      const portfolio = document.getElementById("document_body");
+      function resize() {
+        // console.log(test);
+        if (document.body.clientWidth < 960) {
+          x.style.display = "none";
+          portfolio.classList.add("twelve");
+          portfolio.classList.remove("ten");
+          console.log("test");
+
+          for (let i = 0; i < test.length; i++) {
+            test[i].classList.remove("row");
+            console.log("Working");
+          }
+        } else if (document.body.clientWidth > 800) {
+          console.log("zx");
+          x.style.display = "block";
+          for (let i = 0; i < test.length; i++) {
+            test[i].classList.add("row");
+            console.log("Working");
+          }
+        } else {
+          portfolio.classList.add("ten");
+          portfolio.classList.remove("twelve");
         }
       }
     </script>
