@@ -1,99 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <!-- Basic Page Needs
+<html lang="PL_pl">
+  <head>
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/de280be239.css" />
 
+    <!-- CSS
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
 
-  <!-- CSS
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/base.css" />
+
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
 
-
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/styles.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body>
-
-<header class="header">
-    <div class="logo">
-<h1>Portfolio</h1>
+  <body>
+    <div class="row">
+      <header class="header twelve columns">
+        <div class="logo">
+          <button onclick="hide()"><i class="fas fa-bars"></i></button>
+          <h1>Portfolio</h1>
+        </div>
+      </header>
     </div>
-</header>
-
-<form class="container clearfix">
-
-  <input class="nav-menu" id="all" type="radio" name="filter"
-checked="checked"/>
-<label for="all">Wszystkie</label>
-<input class="nav-menu" id="illustrations" type="radio"
-name="filter"/>
-<label for="illustrations">Ilustracje</label>
-<input class="nav-menu" id="posters" type="radio" name="filter"/>
-<label class="nav-menu" for="posters">Plakaty</label>
-<input class="nav-menu" id="typography" type="radio"
-name="filter"/>
-<label for="typography">Typografia</label>
-<input class="nav-menu" id="packaging" type="radio"
-name="filter"/>
-<label for="packaging">Opakowania</label>
-
-<section class="portfolio">
-  <figure class="four columns all poster" data category="ilustracje">
-    <img src="images/image-1.jpg" alt="To jest pierwsza miniatura portfolio.">
-    <figcaption>
-      <h4>Lorem Ipsum</h4>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-    </figcaption>
-</figure>
-
-</form>
-
-<footer class="container clearfix">
-  <div class="contact">
-<ul>
-<li class="contact-name">Piotr Niewiadomski</li>
-<li class="contact-phone">(+48) 600-700-800</li>
-<li class="contact-email">piotrek@niewiadomski.pl</li>
-</ul>
-  </div>
-  <div class="social">
-<p class="copyright">Piotr Niewiadomski</p>
-<ul>
-<li class="social-dribbble">
-<a href="#">Dribbble</a></li>
-<li class="social-facebook">
-<a href="#">Facebook</a></li>
-<li class="social-twitter">
-<a href="#">Twitter</a></li>
-</ul>
-  </div>
-</footer>
-
-  
-<!-- End Document
+    <div id="nav" class="two columns">
+      <form class="container clearfix nav-menu">
+        <input id="all" type="reset" name="filter" value="Wszystkie" />
+        <input
+          id="illustrations"
+          type="reset"
+          value="Ilustracje"
+          name="filter"
+        />
+        <input id="posters" type="reset" value="Plakaty" name="filter" />
+        <input id="typography" type="reset" value="Typografia" name="filter" />
+        <input id="packaging" type="reset" value="Opakowania" name="filter" />
+      </form>
+    </div>
+    <div class="row">
+      <div class="ten columns">
+        <section class="portfolio">
+          <div class="row">
+            <div class="four columns">
+              <figure data category="ilustracje">
+                <img
+                  src="https://picsum.photos/1000/600?random=441"
+                  width="100%"
+                  alt="To jest pierwsza miniatura portfolio."
+                />
+                <figcaption>
+                  <h4>Lorem Ipsum</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="four columns">
+              <figure data category="ilustracje">
+                <img
+                  src="https://picsum.photos/1000/600?random=177013"
+                  width="100%"
+                  alt="To jest pierwsza miniatura portfolio."
+                />
+                <figcaption>
+                  <h4>Lorem Ipsum</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="four columns">
+              <figure data category="ilustracje">
+                <img
+                  src="https://picsum.photos/1000/600?random=91"
+                  width="100%"
+                  alt="To jest pierwsza miniatura portfolio."
+                />
+                <figcaption>
+                  <h4>Lorem Ipsum</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four columns">
+              <figure data category="ilustracje">
+                <img
+                  src="https://picsum.photos/1000/600?random=1231"
+                  width="100%"
+                  alt="To jest pierwsza miniatura portfolio."
+                />
+                <figcaption>
+                  <h4>Lorem Ipsum</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="four columns">
+              <figure data category="ilustracje">
+                <img
+                  src="https://picsum.photos/1000/600?random=541"
+                  width="100%"
+                  alt="To jest pierwsza miniatura portfolio."
+                />
+                <figcaption>
+                  <h4>Lorem Ipsum</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="four columns">
+              <figure data category="ilustracje">
+                <img
+                  src="https://picsum.photos/1000/600?random=1"
+                  width="100%"
+                  alt="To jest pierwsza miniatura portfolio."
+                />
+                <figcaption>
+                  <h4>Lorem Ipsum</h4>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="row">
+      <footer>
+        <div class="six columns flex">
+          <ul style="list-style: none;">
+            <li class="contact-name">Piotr Niewiadomski</li>
+            <li class="contact-phone">(+48) 600-700-800</li>
+            <li class="contact-email">piotrek@niewiadomski.pl</li>
+          </ul>
+        </div>
+        <div class="six columns flex">
+          <table>
+            <tr>
+              <td>
+                <a href="#"> <i class="fab fa-facebook-square"> </i> </a>
+              </td>
+              <td>
+                <a href="#"> <i class="fab fa-twitter-square"> </i></a>
+              </td>
+              <td>
+                <a href="#"> <i class="fab fa-dribbble"></i> </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </footer>
+    </div>
+    <script>
+      function hide() {
+        var x = document.getElementById("nav");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+  </body>
 </html>
